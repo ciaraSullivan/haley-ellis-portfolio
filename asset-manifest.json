@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/haley-ellis-portfolio/static/css/main.366d9d17.chunk.css",
+    "main.js": "/haley-ellis-portfolio/static/js/main.71a356ce.chunk.js",
+    "main.js.map": "/haley-ellis-portfolio/static/js/main.71a356ce.chunk.js.map",
+    "runtime-main.js": "/haley-ellis-portfolio/static/js/runtime-main.026a1f71.js",
+    "runtime-main.js.map": "/haley-ellis-portfolio/static/js/runtime-main.026a1f71.js.map",
+    "static/css/2.21800774.chunk.css": "/haley-ellis-portfolio/static/css/2.21800774.chunk.css",
+    "static/js/2.5986fd7d.chunk.js": "/haley-ellis-portfolio/static/js/2.5986fd7d.chunk.js",
+    "static/js/2.5986fd7d.chunk.js.map": "/haley-ellis-portfolio/static/js/2.5986fd7d.chunk.js.map",
+    "static/js/3.6a5045fd.chunk.js": "/haley-ellis-portfolio/static/js/3.6a5045fd.chunk.js",
+    "static/js/3.6a5045fd.chunk.js.map": "/haley-ellis-portfolio/static/js/3.6a5045fd.chunk.js.map",
+    "index.html": "/haley-ellis-portfolio/index.html",
+    "static/css/2.21800774.chunk.css.map": "/haley-ellis-portfolio/static/css/2.21800774.chunk.css.map",
+    "static/css/main.366d9d17.chunk.css.map": "/haley-ellis-portfolio/static/css/main.366d9d17.chunk.css.map",
+    "static/js/2.5986fd7d.chunk.js.LICENSE.txt": "/haley-ellis-portfolio/static/js/2.5986fd7d.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/haley-ellis-portfolio/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.026a1f71.js",
+    "static/css/2.21800774.chunk.css",
+    "static/js/2.5986fd7d.chunk.js",
+    "static/css/main.366d9d17.chunk.css",
+    "static/js/main.71a356ce.chunk.js"
+  ]
+}
