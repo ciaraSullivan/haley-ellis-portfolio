@@ -51,7 +51,7 @@ class Heading extends Component {
 			<div className="container">
 				<Navbar light expand="lg" className="row align-items-center">
 					<div className="col">
-						<div className="container mt-5 mb-2">
+						<div className="container mt-5 mb-3">
 							<NavbarBrand className="mr-auto" href="/">
 								Haley Ellis
 							</NavbarBrand>
@@ -61,29 +61,49 @@ class Heading extends Component {
 								navbar
 								className="justify-content-end"
 							>
-								<Nav navbar className="navbar-right">
+								<Nav navbar className="navbar-right align-items-center">
 									<NavItem>
-										<NavLink className="nav-link" to="/creatures">
+										<NavLink
+											className="nav-link"
+											to="/creatures"
+											onClick={this.toggleNav}
+										>
 											Creatures
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/nature">
+										<NavLink
+											className="nav-link"
+											to="/nature"
+											onClick={this.toggleNav}
+										>
 											Nature
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/about">
+										<NavLink
+											className="nav-link"
+											to="/about"
+											onClick={this.toggleNav}
+										>
 											About
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/commissions">
+										<NavLink
+											className="nav-link"
+											to="/commissions"
+											onClick={this.toggleNav}
+										>
 											Commissions
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/contact">
+										<NavLink
+											className="nav-link"
+											to="/contact"
+											onClick={this.toggleNav}
+										>
 											Contact
 										</NavLink>
 									</NavItem>

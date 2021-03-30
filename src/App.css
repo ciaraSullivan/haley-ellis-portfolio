@@ -18,6 +18,10 @@ i {
   font-size: xx-large;
 }
 
+div i {
+  padding: 10px;
+}
+
 .footer {
   text-align: center;
 }
@@ -60,10 +64,6 @@ i {
   transition: all 0.4s ease-in-out 0s;
 }
 
-.content:hover .content-overlay{
-  opacity: 1;
-}
-
 .content-details {
   position: absolute;
   text-align: center;
@@ -81,12 +81,6 @@ i {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
-
 .content-details h3{
   color: #fff;
   font-weight: 500;
@@ -97,4 +91,24 @@ i {
 
 .fadeIn-bottom{
   top: 80%;
+}
+
+@media screen and (max-width: 767px) {   
+    #home-image{
+    	background-image: url(https://res.cloudinary.com/csullivan/image/upload/v1608840667/samples/food/spices.jpg);
+    } 
+}
+
+@media (min-width: 992px) {      
+      #home-image{        
+          background-image: url(https://res.cloudinary.com/csullivan/image/upload/v1608840668/samples/landscapes/nature-mountains.jpg);
+      } 
+      .content:hover .content-overlay{
+      opacity: 1;
+      }
+      .content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
 }

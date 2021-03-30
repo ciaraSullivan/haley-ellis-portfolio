@@ -31,7 +31,7 @@ function About(props) {
 				</div>
 				<div className="col align-self-center text-center order-first order-lg-last my-5">
 					<img
-						src={props.ART.other.aboutImage.image}
+						src={props.ART.aboutImage.image}
 						className="img-fluid align-text-center about"
 						alt="Haley Ellis Porfolio About Page"
 					/>

@@ -35,10 +35,9 @@ class CreaturesPortfolio extends Component {
 					<Modal
 						isOpen={this.state.openedModal === piece}
 						toggle={this.closeModal}
-						size="lg"
-						style={{ maxWidth: "700px", width: "100%" }}
+						style={{ maxWidth: "700px", width: "95%" }}
 					>
-						<ModalHeader>{piece.title}</ModalHeader>
+						<ModalHeader toggle={this.closeModal}>{piece.title}</ModalHeader>
 						<ModalBody>
 							{piece.body}
 							<img

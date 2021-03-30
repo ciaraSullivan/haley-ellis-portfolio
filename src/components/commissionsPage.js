@@ -6,7 +6,7 @@ function Commissions(props) {
 			<div className="row">
 				<div className="col text-center">
 					<img
-						src={props.ART.other.commissionImage.image}
+						src={props.ART.commissionImage.image}
 						className="img-fluid align-text-center commissions"
 						alt="Haley Ellis Porfolio About Page"
 					/>
