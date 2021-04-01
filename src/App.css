@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Noto+Serif&display=swap');
 
-#root {
+#root, .modal-body {
   font-family: 'Noto Serif', serif;
   white-space: pre-line;
 }
@@ -31,7 +31,7 @@ div i {
   text-align: right;
 }
 
-.nav-link, h3, h1, h2, .navbar-brand {
+.nav-link, h3, h1, h2, .navbar-brand, .modal-header {
   font-family: 'Cinzel', serif;
 }
 
@@ -112,3 +112,5 @@ div i {
   opacity: 1;
 }
 }
+
+img { pointer-events: none; }

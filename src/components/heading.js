@@ -51,7 +51,7 @@ class Heading extends Component {
 			<div className="container">
 				<Navbar light expand="lg" className="row align-items-center">
 					<div className="col">
-						<div className="container mt-5 mb-3">
+						<div className="container my-3">
 							<NavbarBrand className="mr-auto" href="/">
 								Haley Ellis
 							</NavbarBrand>

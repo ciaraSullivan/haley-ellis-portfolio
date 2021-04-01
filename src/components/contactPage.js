@@ -41,10 +41,10 @@ class Contact extends Component {
 		return (
 			<div className="container">
 				<div className="row justify-content-center">
-					<div className="col-md-8 col-lg-6">
+					<div className="col-12 col-md-8 col-lg-6">
 						<div className="container">
 							<div className="row justify-content-center align-items-end">
-								<div className="col-7">
+								<div className="col-5">
 									<h3 className="mb-5">Contact</h3>
 									<div>
 										<a href="https://www.instagram.com/hellisillustration/">
@@ -58,7 +58,7 @@ class Contact extends Component {
 										</a>
 									</div>
 								</div>
-								<div className="col-5">
+								<div className="col">
 									<img
 										src={this.props.ART.contactImage.image}
 										className="img-fluid"

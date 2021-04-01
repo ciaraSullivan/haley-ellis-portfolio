@@ -19,7 +19,7 @@ class CreaturesPortfolio extends Component {
 	render() {
 		const pieces = this.props.ART.creaturesPortfolio.map((piece) => {
 			return (
-				<div className="col-12 col-md-6 mb-4" key={piece.title}>
+				<div className="col-12 col-md-6 mb-5" key={piece.title}>
 					<div className="content" onClick={() => this.openModal(piece)}>
 						<div class="content-overlay"></div>
 						<img
@@ -35,7 +35,7 @@ class CreaturesPortfolio extends Component {
 					<Modal
 						isOpen={this.state.openedModal === piece}
 						toggle={this.closeModal}
-						style={{ maxWidth: "700px", width: "95%" }}
+						style={{ maxWidth: "900px", width: "95%" }}
 					>
 						<ModalHeader toggle={this.closeModal}>{piece.title}</ModalHeader>
 						<ModalBody>

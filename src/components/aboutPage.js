@@ -37,11 +37,6 @@ function About(props) {
 					/>
 				</div>
 			</div>
-			<div className="row">
-				<div className="col CREATUREPICSHERE"></div>
-				<div className="col"></div>
-				<div className="col CREATUREPICSHERE"></div>
-			</div>
 		</div>
 	);
 };

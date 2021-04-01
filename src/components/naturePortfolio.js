@@ -19,23 +19,23 @@ class NaturePortfolio extends Component {
 	render() {
 		const pieces = this.props.ART.naturePortfolio.map((piece) => {
 			return (
-				<div className="col-12 col-md-6 mb-4" key={piece.title}>
+				<div className="col-12 col-md-6 mb-5" key={piece.title}>
 					<div className="content" onClick={() => this.openModal(piece)}>
-						<div class="content-overlay"></div>
+						<div className="content-overlay"></div>
 						<img
 							src={piece.image}
 							draggable="false"
 							alt={piece.alt}
 							className="img-fluid content-image"
 						/>
-						<div class="content-details fadeIn-bottom">
-							<h3 class="content-title">{piece.title}</h3>
+						<div className="content-details fadeIn-bottom">
+							<h3 className="content-title">{piece.title}</h3>
 						</div>
 					</div>
 					<Modal
 						isOpen={this.state.openedModal === piece}
 						toggle={this.closeModal}
-						style={{ maxWidth: "700px", width: "95%" }}
+						style={{ maxWidth: "900px", width: "95%" }}
 					>
 						<ModalHeader toggle={this.closeModal}>{piece.title}</ModalHeader>
 						<ModalBody>
