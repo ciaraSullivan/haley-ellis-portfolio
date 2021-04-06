@@ -47,7 +47,10 @@ class Contact extends Component {
 										<a href="https://www.instagram.com/hellisillustration/">
 											<i className="fa fa-instagram fa-2x" />
 										</a>
-										<a href="" className="px-3">
+										<a
+											href="https://www.facebook.com/haleyellisarts"
+											className="px-3"
+										>
 											<i className="fa fa-linkedin fa-2x" />
 										</a>
 										<a href="https://www.facebook.com/haleyellisarts">
