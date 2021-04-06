@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Label } from "reactstrap";
-import { Control, Form, Errors } from "react-redux-form";
+import { Form, Errors } from "react-redux-form";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -81,7 +81,8 @@ class Contact extends Component {
 												Name
 											</Label>
 											<div className="col">
-												<Control.text
+												<input
+													type="text"
 													model=".name"
 													className="form-control"
 													id="name"
@@ -110,7 +111,8 @@ class Contact extends Component {
 												Phone
 											</Label>
 											<div className="col">
-												<Control.text
+												<input
+													type="text"
 													model=".phoneNum"
 													className="form-control"
 													name="phoneNum"
@@ -140,7 +142,8 @@ class Contact extends Component {
 												Email
 											</Label>
 											<div className="col">
-												<Control.text
+												<input
+													type="text"
 													model=".email"
 													className="form-control"
 													id="email"
@@ -167,7 +170,7 @@ class Contact extends Component {
 												Message
 											</Label>
 											<div className="col">
-												<Control.textarea
+												<textarea
 													id="message"
 													name="message"
 													rows="4"
