@@ -1,8 +1,5 @@
-import React, {Component} from "react";
-import {
-	Button,
-	Label
-} from "reactstrap";
+import React, { Component } from "react";
+import { Button, Label } from "reactstrap";
 import { Control, Form, Errors } from "react-redux-form";
 
 const required = (val) => val && val.length;
@@ -25,7 +22,7 @@ class Contact extends Component {
 				name: false,
 				phoneNum: false,
 				email: false,
-				message: ""
+				message: "",
 			},
 		};
 
