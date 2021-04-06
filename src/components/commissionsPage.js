@@ -9,6 +9,7 @@ function Commissions(props) {
 						src={props.ART.commissionImage.image}
 						className="img-fluid align-text-center commissions"
 						alt="Haley Ellis Porfolio About Page"
+						width="80%"
 					/>
 				</div>
 			</div>

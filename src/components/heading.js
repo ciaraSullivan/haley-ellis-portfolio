@@ -61,7 +61,7 @@ class Heading extends Component {
 								navbar
 								className="justify-content-end"
 							>
-								<Nav navbar className="navbar-right align-items-center">
+								<Nav navbar className="navbar-right align-items-lg-center">
 									<NavItem>
 										<NavLink
 											className="nav-link"

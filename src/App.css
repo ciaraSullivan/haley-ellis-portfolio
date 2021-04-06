@@ -3,6 +3,8 @@
 #root, .modal-body {
   font-family: 'Noto Serif', serif;
   white-space: pre-line;
+  text-align: center;
+  color: black;
 }
 
 .about {
@@ -18,12 +20,9 @@ i {
   font-size: xx-large;
 }
 
-div i {
-  padding: 10px;
-}
-
 .footer {
   text-align: center;
+  font-size: 12px;
 }
 
 .navbar-collapse, .navbar-right li a {
@@ -35,12 +34,21 @@ div i {
   font-family: 'Cinzel', serif;
 }
 
-.navbar-brand {
-  font-size: larger;
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0)  !important;
 }
 
-.nav-link.active {
-  text-decoration: underline;
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active{
+    color: rgb(0, 0, 0)  !important;
+    text-decoration: underline;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-size: larger;
 }
 
 .content {
@@ -113,4 +121,7 @@ div i {
 }
 }
 
-img { pointer-events: none; }
+img { 
+  pointer-events: none; 
+  max-height: 100%;
+}

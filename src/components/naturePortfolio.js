@@ -55,7 +55,7 @@ class NaturePortfolio extends Component {
 		return (
 			<React.Fragment>
 				<div className="container-xl">
-					<div className="row mt-5 align-items-center">{pieces}</div>
+					<div className="row mt-3 align-items-center">{pieces}</div>
 				</div>
 			</React.Fragment>
 		);

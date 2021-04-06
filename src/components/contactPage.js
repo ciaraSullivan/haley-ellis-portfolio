@@ -44,35 +44,35 @@ class Contact extends Component {
 					<div className="col-12 col-md-8 col-lg-6">
 						<div className="container">
 							<div className="row justify-content-center align-items-end">
-								<div className="col-5">
+								<div className="col col-lg-5 text-left">
 									<h3 className="mb-5">Contact</h3>
 									<div>
 										<a href="https://www.instagram.com/hellisillustration/">
 											<i className="fa fa-instagram fa-2x" />
 										</a>
+										<a href="" className="px-3">
+											<i className="fa fa-linkedin fa-2x" />
+										</a>
 										<a href="https://www.facebook.com/haleyellisarts">
 											<i className="fa fa-facebook fa-2x" />
 										</a>
-										<a href="">
-											<i className="fa fa-linkedin fa-2x" />
-										</a>
 									</div>
 								</div>
-								<div className="col">
+								<div className="col px-0">
 									<img
 										src={this.props.ART.contactImage.image}
 										className="img-fluid"
 										alt={this.props.ART.contactImage.alt}
 									/>
 								</div>
-								<div className="col-12 mt-2">
+								<div className="col-12 mt-2 text-left">
 									h.ellis.illustration@gmail.com
 								</div>
 							</div>
 							<div className="row justify-content-center row-content mt-5">
 								<div className="col">
 									<Form
-										className="container"
+										className="container text-left"
 										model="feedbackForm"
 										onSubmit={(values) => this.handleSubmit(values)}
 									>

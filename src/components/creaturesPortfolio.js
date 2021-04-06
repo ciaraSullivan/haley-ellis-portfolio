@@ -21,15 +21,15 @@ class CreaturesPortfolio extends Component {
 			return (
 				<div className="col-12 col-md-6 mb-5" key={piece.title}>
 					<div className="content" onClick={() => this.openModal(piece)}>
-						<div class="content-overlay"></div>
+						<div className="content-overlay"></div>
 						<img
 							src={piece.image}
 							draggable="false"
 							alt={piece.alt}
 							className="img-fluid content-image"
 						/>
-						<div class="content-details fadeIn-bottom">
-							<h3 class="content-title">{piece.title}</h3>
+						<div className="content-details fadeIn-bottom">
+							<h3 className="content-title">{piece.title}</h3>
 						</div>
 					</div>
 					<Modal
@@ -55,7 +55,7 @@ class CreaturesPortfolio extends Component {
 		return (
 			<React.Fragment>
 				<div className="container-xl">
-					<div className="row mt-5 align-items-center">{pieces}</div>
+					<div className="row mt-3 align-items-center">{pieces}</div>
 				</div>
 			</React.Fragment>
 		);
