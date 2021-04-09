@@ -111,6 +111,8 @@ class Heading extends Component {
 										<a
 											className="nav-link"
 											href="https://www.instagram.com/hellisillustration/"
+											target="_blank"
+											rel="noreferrer"
 										>
 											<i className="fa fa-instagram fa-2x" />
 										</a>

@@ -1,28 +1,27 @@
 import React, { Component } from "react";
 import { Button, Label } from "reactstrap";
-import { Form, Errors } from "react-redux-form";
+import { Errors, Form, Control } from "react-redux-form";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
 const isNumber = (val) => !isNaN(+val);
-const validEmail = (val) =>
-	/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			name: "",
-			phoneNum: "",
-			email: "",
-			message: "",
+			name: '',
+			phoneNum: '',
+			email: '',
+			message: '',
 			touched: {
 				name: false,
 				phoneNum: false,
 				email: false,
-				message: "",
+				message: '',
 			},
 		};
 
@@ -44,16 +43,26 @@ class Contact extends Component {
 								<div className="col col-lg-5 text-left">
 									<h3 className="mb-5">Contact</h3>
 									<div>
-										<a href="https://www.instagram.com/hellisillustration/">
+										<a
+											href="https://www.instagram.com/hellisillustration/"
+											target="_blank"
+											rel="noreferrer"
+										>
 											<i className="fa fa-instagram fa-2x" />
 										</a>
 										<a
 											href="https://www.facebook.com/haleyellisarts"
 											className="px-3"
+											target="_blank"
+											rel="noreferrer"
 										>
 											<i className="fa fa-linkedin fa-2x" />
 										</a>
-										<a href="https://www.facebook.com/haleyellisarts">
+										<a
+											href="https://www.facebook.com/haleyellisarts"
+											target="_blank"
+											rel="noreferrer"
+										>
 											<i className="fa fa-facebook fa-2x" />
 										</a>
 									</div>
@@ -71,18 +80,14 @@ class Contact extends Component {
 							</div>
 							<div className="row justify-content-center row-content mt-5">
 								<div className="col">
-									<Form
-										className="container text-left"
-										model="feedbackForm"
-										onSubmit={(values) => this.handleSubmit(values)}
+									<Form model="feedbackForm" className="container text-left" onSubmit={(values) => this.handleSubmit(values)}
 									>
 										<div className="row form-group">
 											<Label className="col-12 col-md-2" htmlFor="name">
 												Name
 											</Label>
 											<div className="col">
-												<input
-													type="text"
+												<Control.text
 													model=".name"
 													className="form-control"
 													id="name"
@@ -111,8 +116,7 @@ class Contact extends Component {
 												Phone
 											</Label>
 											<div className="col">
-												<input
-													type="text"
+												<Control.text
 													model=".phoneNum"
 													className="form-control"
 													name="phoneNum"
@@ -142,8 +146,7 @@ class Contact extends Component {
 												Email
 											</Label>
 											<div className="col">
-												<input
-													type="text"
+												<Control.text
 													model=".email"
 													className="form-control"
 													id="email"
@@ -170,7 +173,7 @@ class Contact extends Component {
 												Message
 											</Label>
 											<div className="col">
-												<textarea
+												<Control.textarea
 													id="message"
 													name="message"
 													rows="4"
