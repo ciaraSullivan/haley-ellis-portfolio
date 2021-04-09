@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, Label } from "reactstrap";
 import { Errors, Form, Control } from "react-redux-form";
 
+/* eslint-disable react/jsx-pascal-case */
+
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
@@ -80,14 +82,18 @@ class Contact extends Component {
 							</div>
 							<div className="row justify-content-center row-content mt-5">
 								<div className="col">
-									<Form model="feedbackForm" className="container text-left" onSubmit={(values) => this.handleSubmit(values)}
+									<Form
+										model="feedbackForm"
+										className="container text-left"
+										onSubmit={(values) => this.handleSubmit(values)}
 									>
 										<div className="row form-group">
 											<Label className="col-12 col-md-2" htmlFor="name">
 												Name
 											</Label>
 											<div className="col">
-												<Control.text
+												<Control
+													type="text"
 													model=".name"
 													className="form-control"
 													id="name"
@@ -116,7 +122,8 @@ class Contact extends Component {
 												Phone
 											</Label>
 											<div className="col">
-												<Control.text
+												<Control
+													type="text"
 													model=".phoneNum"
 													className="form-control"
 													name="phoneNum"
@@ -146,7 +153,8 @@ class Contact extends Component {
 												Email
 											</Label>
 											<div className="col">
-												<Control.text
+												<Control
+													type="text"
 													model=".email"
 													className="form-control"
 													id="email"
