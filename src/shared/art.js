@@ -175,6 +175,27 @@ const creaturesPortfolio = [
 
 const naturePortfolio = [
 	{
+		title: "Snow Leopard",
+		body: " ",
+		image:
+			"https://res.cloudinary.com/csullivan/image/upload/v1618061444/Haley%20Ellis/Snow_Leopard_szrgow.jpg",
+		alt: "Haley Ellis Portfolio Snow Leopard",
+	},
+	{
+		title: "Sandhill Cranes",
+		body: " ",
+		image:
+			"https://res.cloudinary.com/csullivan/image/upload/v1618061444/Haley%20Ellis/Sandhill_Cranes_ntriae.jpg",
+		alt: "Haley Ellis Portfolio Sandhill Cranes",
+	},
+	{
+		title: "Great Gray Owl",
+		body: " ",
+		image:
+			"https://res.cloudinary.com/csullivan/image/upload/v1618061444/Haley%20Ellis/Great_Gray_Owl_vsiwb6.jpg",
+		alt: "Haley Ellis Portfolio Great Gray Owl",
+	},
+	{
 		title: "Pelicans",
 		body: " ",
 		image:
