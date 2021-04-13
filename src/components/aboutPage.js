@@ -1,4 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
 
 function About(props) {
     return (
@@ -41,4 +49,4 @@ function About(props) {
 	);
 };
 
-export default About;
+export default withRouter(connect(mapStateToProps)(About))

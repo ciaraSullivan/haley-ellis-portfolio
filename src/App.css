@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 #root, .modal-body {
-  font-family: 'Noto Serif', serif;
-  white-space: pre-line;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   color: black;
 }

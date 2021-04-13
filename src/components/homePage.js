@@ -1,4 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
 
 function HomePage(props) {
     return (
@@ -15,4 +23,4 @@ function HomePage(props) {
     )
 }
 
-export default HomePage;
+export default withRouter(connect(mapStateToProps)(HomePage))

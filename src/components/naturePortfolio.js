@@ -1,5 +1,13 @@
 import React, { Component } from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
 
 class NaturePortfolio extends Component {
 	constructor(props) {
@@ -35,7 +43,7 @@ class NaturePortfolio extends Component {
 					<Modal
 						isOpen={this.state.openedModal === piece}
 						toggle={this.closeModal}
-						style={{ maxWidth: "900px", width: "95%" }}
+						style={{ maxWidth: "1200px", width: "95%" }}
 					>
 						<ModalHeader toggle={this.closeModal}>{piece.title}</ModalHeader>
 						<ModalBody>
@@ -62,4 +70,4 @@ class NaturePortfolio extends Component {
 	}
 }
 
-export default NaturePortfolio;
+export default withRouter(connect(mapStateToProps)(NaturePortfolio))

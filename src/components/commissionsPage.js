@@ -1,30 +1,49 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
 
 function Commissions(props) {
 	return (
-		<div className="container">
-			<div className="row">
-				<div className="col text-center">
+		<div className='container'>
+			<div className='row justify-content-center'>
+				<div className='col text-center'>
 					<img
 						src={props.ART.commissionImage.image}
-						className="img-fluid align-text-center commissions"
-						alt="Haley Ellis Porfolio About Page"
-						width="80%"
+						className='img-fluid align-text-center commissions'
+						alt='Haley Ellis Porfolio About Page'
+						width='80%'
 					/>
 				</div>
 			</div>
-			<div className="row mt-3">
-				<div className="col align-self-center text-center">
-					<h3 className="mb-5">Commissions</h3>
-                    <p>
-                        In 2017, I received my BFA from Western Michigan University. My work comes from a deeply embedded fascination with nature, and my childhood obsession with dinosaurs and all things make-believe. I pull much of my inspiration from the natural
-                        world and use it to inform the design of the creatures I create. When I’m not day-dreaming about dragons outside my window, I’m
-                        working to combine my proficiency in traditional media with my ever growing skills in Photoshop and Procreate. 
-                    </p>		
+			<div className='row mt-3 justify-content-center'>
+				<div className='col-12 col-md-8 align-self-center text-center'>
+					<h3 className='mb-5'>Commissions</h3>
+					<p>
+						I am open to commissions, whether you want a naturalist
+						drawing of a favorite animal, a pet portrait, or a
+						fantastical scene with any bizarre creature you desire.
+					</p>
+					<p>
+						I work in pen and ink, pencil, watercolor, or 2D digital
+						media. The medium you chose will influence the price of
+						the piece, as will size.
+					</p>
+					<p>
+						If you would like to inquire about these services, feel
+						free to send me an email through the{" "}
+						<Link to='/contact'>contact page</Link>. I look forward
+						to bringing your ideas to life!
+					</p>
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Commissions;
+export default withRouter(connect(mapStateToProps)(Commissions))

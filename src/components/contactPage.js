@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import { Button, Label } from "reactstrap";
 import { Errors, Form, Control } from "react-redux-form";
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+import { actions } from "react-redux-form"
 
 /* eslint-disable react/jsx-pascal-case */
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
+
+const mapDispatchToProps = {
+	resetFeedbackForm: () => actions.reset("feedbackForm"),
+}
+
+//No submit values action has been created yet.
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -212,4 +227,4 @@ class Contact extends Component {
 	}
 }
 
-export default Contact;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Contact))

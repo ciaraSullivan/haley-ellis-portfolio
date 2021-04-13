@@ -1,5 +1,13 @@
 import React, { Component} from "react";
 import { Modal, ModalHeader, ModalBody} from "reactstrap";
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
+
+const mapStateToProps = (state) => {
+	return {
+		ART: state.ART,
+	}
+}
 
 class CreaturesPortfolio extends Component {
 	constructor(props) {
@@ -19,37 +27,45 @@ class CreaturesPortfolio extends Component {
 	render() {
 		const pieces = this.props.ART.creaturesPortfolio.map((piece) => {
 			return (
-				<div className="col-12 col-md-6 mb-5" key={piece.title}>
-					<div className="content" onClick={() => this.openModal(piece)}>
-						<div className="content-overlay"></div>
+				<div className='col-12 col-md-6 mb-5' key={piece.title}>
+					<div
+						className='content'
+						onClick={() => this.openModal(piece)}
+					>
+						<div className='content-overlay'></div>
 						<img
 							src={piece.image}
-							draggable="false"
+							draggable='false'
 							alt={piece.alt}
-							className="img-fluid content-image"
+							className='img-fluid content-image'
 						/>
-						<div className="content-details fadeIn-bottom">
-							<h3 className="content-title">{piece.title}</h3>
+						<div className='content-details fadeIn-bottom'>
+							<h3 className='content-title'>{piece.title}</h3>
 						</div>
 					</div>
 					<Modal
 						isOpen={this.state.openedModal === piece}
 						toggle={this.closeModal}
-						style={{ maxWidth: "900px", width: "95%" }}
+						style={{
+							width: "95%",
+							maxWidth: "1200px",
+						}}
 					>
-						<ModalHeader toggle={this.closeModal}>{piece.title}</ModalHeader>
+						<ModalHeader toggle={this.closeModal}>
+							{piece.title}
+						</ModalHeader>
 						<ModalBody>
 							{piece.body}
 							<img
 								src={piece.image}
-								draggable="false"
+								draggable='false'
 								alt={piece.alt}
-								className="img-fluid"
+								className='img-fluid'
 							/>
 						</ModalBody>
 					</Modal>
 				</div>
-			);
+			)
 		});
 
 		return (
@@ -62,4 +78,4 @@ class CreaturesPortfolio extends Component {
 	}
 }
 
-export default CreaturesPortfolio;
+export default withRouter(connect(mapStateToProps)(CreaturesPortfolio))
