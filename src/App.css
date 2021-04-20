@@ -2,36 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 #root, .modal-body {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  color: black;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	color: black;
 }
 
 .about {
-  max-height: 600px;
+  	max-height: 600px;
 }
 
 .commissions {
-  max-height: 400px;
+  	max-height: 400px;
 }
 
 i {
-  color: black;
-  font-size: xx-large;
+	color: black;
+	font-size: xx-large;
 }
 
 .footer {
-  text-align: center;
-  font-size: 12px;
+	text-align: center;
+	font-size: 12px;
 }
 
 .navbar-collapse, .navbar-right li a {
-  align-items: right;
-  text-align: right;
+	align-items: right;
+	text-align: right;
 }
 
 .nav-link, h3, h1, h2, .navbar-brand, .modal-header {
-  font-family: 'Cinzel', serif;
+  	font-family: 'Cinzel', serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -44,57 +44,57 @@ i {
 }
 
 .modal-header {
-  text-align: center;
+  	text-align: center;
 }
 
 .navbar-brand {
-  font-size: larger;
+  	font-size: larger;
 }
 
 .content {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
 }
 
 .content-details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
 }
 
 .content-details h3{
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
 }
 
 .fadeIn-bottom{
@@ -108,20 +108,20 @@ i {
 }
 
 @media (min-width: 992px) {      
-      #home-image{        
-          background-image: url(https://res.cloudinary.com/csullivan/image/upload/v1608840668/samples/landscapes/nature-mountains.jpg);
-      } 
-      .content:hover .content-overlay{
-      opacity: 1;
-      }
-      .content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
+    #home-image{        
+        background-image: url(https://res.cloudinary.com/csullivan/image/upload/v1608840668/samples/landscapes/nature-mountains.jpg);
+    } 
+    .content:hover .content-overlay{
+        opacity: 1;
+    }
+    .content:hover .content-details{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
 }
 
 img { 
-  pointer-events: none; 
-  max-height: 100%;
+	pointer-events: none; 
+	max-height: 100%;
 }
