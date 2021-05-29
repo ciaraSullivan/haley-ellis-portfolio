@@ -46,7 +46,30 @@ class Contact extends Component {
 
 	handleSubmit(values) {
 		console.log(JSON.stringify(values))
+
+		this.sendFeedback({
+			message: values.message,
+			from_name: values.name,
+			reply_to: values.email,
+			their_phoneNum: values.phoneNum,
+		})
+
 		this.props.resetFeedbackForm()
+	}
+
+	sendFeedback(variables) {
+		window.emailjs
+			.send("service_88yf0ck", "template_h359qfp", variables)
+			.then((res) => {
+				console.log("Email successfully sent!")
+			})
+			// Handle errors here however you like, or use a React error boundary
+			.catch((err) =>
+				console.error(
+					"Oh well, you failed. Here some thoughts on the error that occured:",
+					err
+				)
+			)
 	}
 
 	render() {
@@ -54,7 +77,10 @@ class Contact extends Component {
 			<React.Fragment>
 				<Helmet>
 					<title>Contact | Haley Ellis Illustration</title>
-					<meta name='description' content='Contact information and social media links for more examples of my work. Reach out with questions or commission requests.' />
+					<meta
+						name='description'
+						content='Contact information and social media links for more examples of my work. Reach out with questions or commission requests.'
+					/>
 				</Helmet>
 				<div className='container'>
 					<div className='row justify-content-center'>
@@ -64,25 +90,48 @@ class Contact extends Component {
 									<div className='col col-lg-5 text-left'>
 										<h3 className='mb-5'>Contact</h3>
 										<div>
-											<a href='https://www.instagram.com/hellisillustration/' target='_blank' rel='noreferrer'>
+											<a
+												href='https://www.instagram.com/hellisillustration/'
+												target='_blank'
+												rel='noreferrer'
+											>
 												<i className='fa fa-instagram fa-2x' />
 											</a>
-											<a href='https://www.linkedin.com/in/haley-jansson-18067a207/' className='px-3' target='_blank' rel='noreferrer'>
+											<a
+												href='https://www.linkedin.com/in/haley-jansson-18067a207/'
+												className='px-3'
+												target='_blank'
+												rel='noreferrer'
+											>
 												<i className='fa fa-linkedin fa-2x' />
 											</a>
-											<a href='https://www.facebook.com/hellisillustration' target='_blank' rel='noreferrer'>
+											<a
+												href='https://www.facebook.com/hellisillustration'
+												target='_blank'
+												rel='noreferrer'
+											>
 												<i className='fa fa-facebook fa-2x' />
 											</a>
 										</div>
 									</div>
 									<div className='col px-0'>
-										<img src={this.props.ART.contactImage.image} className='img-fluid' alt={this.props.ART.contactImage.alt} />
+										<img
+											src={this.props.ART.contactImage.image}
+											className='img-fluid'
+											alt={this.props.ART.contactImage.alt}
+										/>
 									</div>
-									<div className='col-12 mt-2 text-left'>h.ellis.illustration@gmail.com</div>
+									<div className='col-12 mt-2 text-left'>
+										h.ellis.illustration@gmail.com
+									</div>
 								</div>
 								<div className='row justify-content-center row-content mt-5'>
 									<div className='col'>
-										<Form style={{display: "none"}} model='feedbackForm' className='container text-left' onSubmit={(values) => this.handleSubmit(values)}>
+										<Form
+											model='feedbackForm'
+											className='container text-left'
+											onSubmit={(values) => this.handleSubmit(values)}
+										>
 											<div className='row form-group'>
 												<Label className='col-12 col-md-2' htmlFor='name'>
 													Name
@@ -107,20 +156,26 @@ class Contact extends Component {
 														component='div'
 														messages={{
 															required: "Required",
-															minLength: "Must enter at least 2 characters.",
-															maxLength: "Must enter 20 characters or less",
+															minLength:
+																"Must enter at least 2 characters.",
+															maxLength:
+																"Must enter 20 characters or less",
 														}}
 													/>
 												</div>
 											</div>
 											<div className='row form-group'>
-												<Label className='col-12 col-md-2' htmlFor='phoneNum'>
+												<Label
+													className='col-12 col-md-2'
+													htmlFor='phoneNum'
+												>
 													Phone
 												</Label>
 												<div className='col'>
 													<Control
 														type='text'
 														model='.phoneNum'
+														id='phoneNum'
 														className='form-control'
 														name='phoneNum'
 														validators={{
@@ -137,8 +192,10 @@ class Contact extends Component {
 														component='div'
 														messages={{
 															required: "Required",
-															minLength: "Must enter at least 10 numbers.",
-															maxLength: "Must enter 15 numbers or less",
+															minLength:
+																"Must enter at least 10 numbers.",
+															maxLength:
+																"Must enter 15 numbers or less",
 															isNumber: "Must be a number.",
 														}}
 													/>
@@ -173,16 +230,29 @@ class Contact extends Component {
 												</div>
 											</div>
 											<div className='row form-group'>
-												<Label className='col-12 col-md-2' htmlFor='message'>
+												<Label
+													className='col-12 col-md-2'
+													htmlFor='message'
+												>
 													Message
 												</Label>
 												<div className='col'>
-													<Control.textarea id='message' name='message' rows='4' model='.message' className='form-control' />
+													<Control.textarea
+														id='message'
+														name='message'
+														rows='4'
+														model='.message'
+														className='form-control'
+													/>
 												</div>
 											</div>
 											<div className='row form-group'>
 												<div className='col text-center offset-md-2'>
-													<Button type='submit' color='secondary' style={{ width: "50%" }}>
+													<Button
+														type='submit'
+														color='secondary'
+														style={{ width: "50%" }}
+													>
 														Send
 													</Button>
 												</div>
